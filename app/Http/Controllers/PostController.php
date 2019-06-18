@@ -77,7 +77,13 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->title= $request->title;
+		$post->content = $request->content;
+		
+		$post->save();
+		
+		dd($request);
+		return redirect()->route('posts.show',[$post]);
     }
 
     /**
@@ -88,6 +94,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+		return redirect()->back();
+		
+		dd($request);
     }
 }

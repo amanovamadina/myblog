@@ -28,6 +28,10 @@
 	  <div class="btn-group" role="group" aria-label="Basic example">
   <button><a href="{{ route('posts.show', [$post])}}"> <i class="fas fa-eye"> </i> </a></button>
   <button><a href="{{ route('posts.edit',[$post]) }}"> <i class="fas fa-edit"> </i> </a> </button>
+  <form action="{{ route('posts.destroy',[$post])}}" method="post">
+	@csrf
+	@method('DELETE')
+  </form>
   <button> <i class="fas fa-trash"> </i></button>
 </div>
 	  </td>
