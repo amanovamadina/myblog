@@ -12,6 +12,12 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+	 
+	 public function __construct ()
+	 {
+		  $this->middleware('auth')->except(['index', 'show']);
+	 }
+	 
     public function index()
     {
 		$posts = Post::paginate(10);
@@ -25,7 +31,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.create');
     }
 
     /**

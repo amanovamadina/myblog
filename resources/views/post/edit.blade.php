@@ -4,9 +4,10 @@
 <div class="container">
 	<br>
 	
-	<form action="{{ route('posts.update',[$post])}}" method="post">
-	@method('PUT')
+	<form action="{{ route('posts.update',$post->id)}}" method="post">
 	@csrf
+	@method('PUT')
+	
 	
   <div class="form-group">
     <label for="title">Title</label>
