@@ -9,12 +9,12 @@
 		
   <div class="form-group">
     <label for="title">Title</label>
-    <input type="text" class="form-control" id="title" value="{{ old('title') }}">
+    <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}">
 
   </div>
   <div class="form-group">
     <label for="content">Content</label>
-	<textarea class="form-control" id="content" rows="12"> {{ old('content') }}</textarea>
+	<textarea class="form-control" id="content" name="content" rows="12"> {{ old('content') }}</textarea>
   </div>
 
   <button type="submit" class="btn btn-primary">Save</button>

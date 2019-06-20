@@ -49,7 +49,7 @@ class PostController extends Controller
 		
 		$post->save();
 		
-		return redirect('posts.index');
+		return redirect()->route('posts.index');
     }
 
     /**
